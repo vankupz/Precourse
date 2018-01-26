@@ -44,14 +44,28 @@ function isPrime(num) {
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
+  if(num===1 || num===0)
+  {
+    return false;
+  }
+  for(let i=2; i<num; i++)
+  {
+    if(num % i === 0)
+    {
+      return false
+    }
+  }
+  return true;
 }
 
 function returnFirst(arr) {
   // return the first item from the array
+  return arr[0];
 }
 
 function returnLast(arr) {
   // return the last item of the array
+  return arr[arr.length] - 1;
 }
 
 function getArrayLength(arr) {
